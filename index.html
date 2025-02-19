@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TestCrafters</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <!-- Include MathJax for LaTeX rendering -->
+    <script type="text/javascript" async 
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+</head>
+<body>
+    <div class="exam-container">
+        <header class="header">
+            <div class="header-content">
+                <div class="logo">TestCrafters</div>
+                <div class="user-actions">
+                    <button>
+                        <i class="far fa-bell"></i>
+                        <span class="notification-badge">0</span>
+                    </button>
+                    <button>
+                        <i class="far fa-user"></i>
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <div class="exam-title">
+                <h1><center>SUST Model Test-1</center></h1>
+                <span><center>LIVE_EXAM</center></span>
+            </div>
+
+            <!-- Questions Container -->
+            <div id="questions-container">
+                <div class="question-card">
+                    <div class="question-header">
+                        <span class="question-number">Question 2</span>
+                        <span class="points-badge">1 points</span>
+                    </div>
+                    <div class="question-text">
+                        Solve the differential equation: 
+                        \[ \frac{dy}{dx} + 2y = x^2 \]
+                    </div>
+                    <div class="options">
+                        <div class="option" onclick="selectOption(2, 0)">
+                            <span class="option-letter">A</span>
+                            <span>
+                                \[ y = e^{-2x} + \frac{x^2}{2} - \frac{x}{2} + \frac{1}{4} \]
+                            </span>
+                        </div>
+                        <div class="option" onclick="selectOption(2, 1)">
+                            <span class="option-letter">B</span>
+                            <span>
+                                \[ y = e^{-2x} + x^2 - 2x + 2 \]
+                            </span>
+                        </div>
+                        <div class="option" onclick="selectOption(2, 2)">
+                            <span class="option-letter">C</span>
+                            <span>
+                                \[ y = -e^{-2x} + \frac{x^2}{2} - \frac{x}{2} + \frac{1}{4} \]
+                            </span>
+                        </div>
+                        <div class="option" onclick="selectOption(2, 3)">
+                            <span class="option-letter">D</span>
+                            <span>
+                                \[ y = e^{2x} + \frac{x^2}{2} + \frac{x}{2} + \frac{1}{4} \]
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+
+            <!-- Submit Exam Button -->
+            <button id="submit-btn" class="submit-button">
+                <i class="fas fa-paper-plane"></i>
+                Submit Exam
+            </button>
+        </main>
+
+        <!-- Status Bar -->
+        <div class="status-bar">
+            <div class="status-content">
+                <div class="status-pill">
+                    <i class="fas fa-check-circle"></i>
+                    Attempted: <span id="attempted-count">0</span>
+                </div>
+                <div class="status-pill">
+                    <i class="fas fa-clock"></i>
+                    Time Left: <span id="time-left">60:00</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Include your custom JavaScript -->
+    <script src="script.js"></script>
+
+    <!-- Ensure MathJax processes the page content -->
+    <script>
+        MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
+    </script>
+</body>
+</html>
